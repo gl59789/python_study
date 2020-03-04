@@ -74,7 +74,7 @@ print(convert_phone_number("Phone number of Buckingham Palace is +44 303 123 730
 
 import re
 def transform_record(record):
-    new_record = re.sub(r"(\d{3})-(\d{3})", r"1-\1-\2", record)
+    new_record = re.sub(r"(\d{3})-(\d{3})", r"+1-\1-\2", record)
     return new_record
 
 print(transform_record("Sabrina Green,802-867-5309,System Administrator"))
@@ -92,7 +92,7 @@ print(transform_record("Charlie Rivera,698-746-3357,Web Developer"))
 
 import re
 def multi_vowel_words(text):
-    pattern = r"([aeiou]{3-})"
+    pattern = r"\w*[aeiou]{3,}\w*\b"
     result = re.findall(pattern, text)
     return result
 
