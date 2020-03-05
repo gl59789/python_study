@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#Import libraries
+# Import libraries
 import csv
 import re
 
@@ -8,10 +8,11 @@ import re
 def contains_domain(address, domain):
     """Returns True if the email address contains the given domain,
       in the domain position, false if not."""
-    domain_pattern = r'[\w\.-]+@'+domain+'$'
+    domain_pattern = r'[\w\.-]+@' + domain + '$'
     if re.match(domain_pattern, address):
         return True
     return False
+
 
 def replace_domain(address, old_domain, new_domain):
     """Replaces the old domain with the new domain in
@@ -20,14 +21,15 @@ def replace_domain(address, old_domain, new_domain):
     address = re.sub(old_domain_pattern, new_domain, address)
     return address
 
+
 def main():
     """Processes the list of emails, replacing any instances of the
       old domain with the new domain."""
     old_domain, new_domain = 'abc.edu', 'xyz.edu'
     csv_file_location = 'user_email.csv'
-#   report_file = '<data-directory>' + '/updated_user_emails.csv'
+    #   report_file = '<data-directory>' + '/updated_user_emails.csv'
     report_file = 'updated_user_emails.csv'
-    user_email_list = []
+    #    user_email_list = []
     old_domain_email_list = []
     new_domain_email_list = []
     with open(csv_file_location, 'r') as f:
@@ -52,4 +54,12 @@ def main():
         writer.writerows(user_data_list)
         output_file.close()
 
+
 main()
+
+"""from <file> import <function>
+
+import unittest
+
+
+class TestRearrange(unittest.TestCase):"""
