@@ -1,7 +1,15 @@
 def get_event_date(event):
+    """
+    Args:
+        event:
+    """
     return event.date
 
 def current_users(events):
+    """
+    Args:
+        events:
+    """
     events.sort(key=get_event_date)
     machines = {}
     for event in events:
@@ -14,6 +22,10 @@ def current_users(events):
     return machines
 
 def generate_report(machines):
+    """
+    Args:
+        machines:
+    """
     for machine, users in machines.items():
         if len(users) > 0:
             user_list = ", ".join(users)
@@ -21,6 +33,13 @@ def generate_report(machines):
 
 class Event:
     def __init__(self, event_date, event_type, machine_name, user):
+        """
+        Args:
+            event_date:
+            event_type:
+            machine_name:
+            user:
+        """
         self.date = event_date
         self.type = event_type
         self.machine = machine_name

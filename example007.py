@@ -32,6 +32,10 @@ print(check_zip_code("The Parliament of Canada is at 111 Wellington St, Ottawa, 
 
 import re
 def check_character_groups(text):
+    """
+    Args:
+        text:
+    """
     result = re.search(r"\w\s\w", text)
     return result != None
 

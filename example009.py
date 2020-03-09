@@ -6,8 +6,13 @@ import re
 
 
 def contains_domain(address, domain):
-    """Returns True if the email address contains the given domain,
-      in the domain position, false if not."""
+    """Returns True if the email address contains the given domain, in the
+    domain position, false if not.
+
+    Args:
+        address:
+        domain:
+    """
     domain_pattern = r'[\w\.-]+@' + domain + '$'
     if re.match(domain_pattern, address):
         return True
@@ -15,16 +20,22 @@ def contains_domain(address, domain):
 
 
 def replace_domain(address, old_domain, new_domain):
-    """Replaces the old domain with the new domain in
-      the received address."""
+    """Replaces the old domain with the new domain in the received address.
+
+    Args:
+        address:
+        old_domain:
+        new_domain:
+    """
     old_domain_pattern = r'' + old_domain + '$'
     address = re.sub(old_domain_pattern, new_domain, address)
     return address
 
 
 def main():
-    """Processes the list of emails, replacing any instances of the
-      old domain with the new domain."""
+    """Processes the list of emails, replacing any instances of the old domain
+    with the new domain.
+    """
     old_domain, new_domain = 'abc.edu', 'xyz.edu'
     csv_file_location = 'user_email.csv'
     #   report_file = '<data-directory>' + '/updated_user_emails.csv'

@@ -1,0 +1,35 @@
+ab - apache benchmark
+pidof
+nice / renice
+pprofile3
+kcachegrind
+
+https://docs.microsoft.com/en-us/sysinternals/downloads/procmon
+http://www.brendangregg.com/linuxperf.html
+http://brendangregg.com/usemethod.html
+Activity Monitor in Mac:
+Performance Monitor on Windows
+https://www.digitalcitizen.life/how-use-resource-monitor-windows-7
+https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer
+https://en.wikipedia.org/wiki/Cache_(computing)
+https://www.reddit.com/r/linux/comments/d7hx2c/why_nice_levels_are_a_placebo_and_have_been_for_a/
+
+
+https://en.wikipedia.org/wiki/Profiling_(computer_programming)
+
+
+https://realpython.com/python-concurrency/
+
+https://hackernoon.com/threaded-asynchronous-magic-and-how-to-wield-it-bba9ed602c32
+
+
+How to find logs on Windows 10 (Digital Masters Magazine)
+How to view the System Log on a Mac (How-to Geek)
+How to check system logs on Linux (FOSS Linux)
+You also need to be familiar with the tools available in your OS to diagnose problems. These are the tools we called out, but you don't need to limit yourself to them:
+
+Process Monitor for Windows (Microsoft)
+Linux strace command tutorial for beginners (HowtoForge)
+How to trace your system calls on Mac OS (/etc/notes)
+
+Valgrind

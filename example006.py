@@ -52,6 +52,10 @@ print(contents_of_file("flowers.csv"))
 import csv
 
 def read_employees(csv_file_location):
+    """
+    Args:
+        csv_file_location:
+    """
     employee_list = []
     empDialect = csv.register_dialect('empDialect', skipinitialspace=True, strict=True)
     employee_csv = csv.DictReader(open(csv_file_location), dialect='empDialect')
@@ -62,6 +66,10 @@ def read_employees(csv_file_location):
     return employee_list
 
 def process_data(employee_list):
+    """
+    Args:
+        employee_list:
+    """
     department_list = []
     department_data = {}
     for employee_data in employee_list:
@@ -73,6 +81,11 @@ def process_data(employee_list):
     return department_data
 
 def write_report(dictionary, report_file):
+    """
+    Args:
+        dictionary:
+        report_file:
+    """
     with open(report_file, "w+") as f:
         for k in sorted(dictionary):
             f.write(str(k)+':'+str(dictionary[k])+'\n')

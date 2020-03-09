@@ -3,6 +3,11 @@ import os
 def new_directory(directory, filename):
 # Before creating a new directory, check to see if it already exists
 
+    """
+    Args:
+        directory:
+        filename:
+    """
     if not os.path.exists(directory):
         os.mkdir(directory)
         os.chdir(directory)

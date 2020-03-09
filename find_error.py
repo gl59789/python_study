@@ -6,6 +6,10 @@ import os
 
 
 def error_search(log_file):
+    """
+    Args:
+        log_file:
+    """
     error = input("What is the error? ")
     returned_errors = []
     with open(log_file, mode='r',encoding='UTF-8') as file:
@@ -20,6 +24,10 @@ def error_search(log_file):
 
 
 def file_output(returned_errors):
+    """
+    Args:
+        returned_errors:
+    """
     with open(os.path.expanduser('~') + '/data/errors_found.log', 'w') as file:
         for error in returned_errors:
             file.write(error)

@@ -5,6 +5,10 @@ import subprocess
 
 
 def change_file_name(oldfile):
+    """
+    Args:
+        oldfile:
+    """
     with open(oldfile, "r") as f:
         for filename in f.readlines():
             old_filename = filename.strip()

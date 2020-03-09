@@ -22,6 +22,10 @@ print(result.stderr)
 import re
 def show_time_of_pid(line):
 #    pattern = r"(^\w{3} \d{1,2} \d{1,2}:\d{2}:\d{2}) \[(\d+)\]"
+    """
+    Args:
+        line:
+    """
     pattern = r"\[(\d+)\]"
     result = re.search(pattern, line)
 #    return "{} pid: {}".format(result[1], result[2])

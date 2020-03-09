@@ -6,11 +6,19 @@ from collections import Counter
 
 
 def file_handle(logfile):
+    """
+    Args:
+        logfile:
+    """
     with open(logfile, "r") as f:
         return f.readlines()
 
 
 def write_error_report(list_logs):
+    """
+    Args:
+        list_logs:
+    """
     regex = r"ERROR (([A-Za-z\']+ )+)"
     error_dict = {}
     for log in list_logs:
@@ -25,6 +33,10 @@ def write_error_report(list_logs):
 
 
 def write_per_user_report(list_logs):
+    """
+    Args:
+        list_logs:
+    """
     regex = r"(ERROR|INFO) .* \(([a-z]+(\.\w+)?)\)"
     user_dict = {}
     for log in list_logs:
