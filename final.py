@@ -60,7 +60,7 @@ def write_per_user_report(list_logs):
 
 
 
-logfile = "syslog.log"
+logfile = "./syslog.log"
 write_error_report(file_handle(logfile))
 write_per_user_report(file_handle(logfile))
 
